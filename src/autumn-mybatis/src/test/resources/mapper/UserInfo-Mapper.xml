@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.autumn.mybatis.mapper.UserInfoMapper">
+	<resultMap type="com.autumn.mybatis.model.UserInfo"  id="userInfoResultMap">
+		<id property="id" column="UserId" />
+		<result property="name" column="UserName" />
+		<result property="age" column="Age" />		
+	</resultMap>
+	 <select id="getUserInfos"  resultType="com.autumn.mybatis.model.UserInfo"  resultMap="userInfoResultMap">  
+        <![CDATA[ 
+            SELECT * from Users 
+        ]]>
+    </select>
+</mapper>

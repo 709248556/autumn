@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="  
+    http://www.springframework.org/schema/context  
+    http://www.springframework.org/schema/context/spring-context.xsd  
+    http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans.xsd  
+    http://www.springframework.org/schema/tx  
+    http://www.springframework.org/schema/tx/spring-tx.xsd  
+    http://www.springframework.org/schema/jdbc  
+    http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd  
+    http://www.springframework.org/schema/cache  
+    http://www.springframework.org/schema/cache/spring-cache-3.1.xsd  
+    http://www.springframework.org/schema/aop  
+    http://www.springframework.org/schema/aop/spring-aop.xsd  
+    http://www.springframework.org/schema/util  
+    http://www.springframework.org/schema/util/spring-util.xsd">
+	<context:component-scan base-package="com.autumn" />
+
+	<!-- 配置数据库的连接参数及连接池 -->
+	<bean id="bds" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="username" value="sa" />
+		<property name="password" value="123456" />
+		<property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:jtds:sqlserver://192.168.1.52:1433;databasename=myBatis" />
+		<property name="maxWait" value="10000" />
+		<property name="maxIdle" value="10" />
+		<!-- //自动回收连接池，避免连接池泄露 -->
+		<property name="removeAbandoned" value="true" />
+	</bean>
+
+	<bean id="dataBaseProvider" class="com.autumn.mybatis.provider.sqlserver.SqlServerProvider">
+
+	</bean>
+
+	<bean id="mapperRegister" class="com.autumn.mybatis.mapper.MapperRegister">
+		<constructor-arg name="dbProvider" ref="dataBaseProvider"></constructor-arg>
+	</bean>
+
+	<!-- 配置mapperDao接口文件扫描 -->
+	<bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.autumn.mybatis.mapper" />
+
+	</bean>
+
+	<!-- 配置sqlSessionFactoryBean -->
+	<bean id="ssf" class="com.autumn.mybatis.session.MybatisSqlSessionFactoryBean">
+		<property name="dataSource" ref="bds" />
+		<property name="typeAliasesPackage" value="com.autumn.mybatis.model" />
+		<property name="configLocation" value="classpath:mybatis.xml" />
+		<property name="mapperLocations" value="classpath:mapper/*Mapper.xml" />
+	</bean>
+
+
+	<!-- 配置事务管理器 -->
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="bds" />
+	</bean>
+	<!-- 用于驱动@Transactional注解 -->
+	<tx:annotation-driven transaction-manager="txManager" />
+
+</beans>

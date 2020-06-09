@@ -1,0 +1,311 @@
+[
+  {
+    "id": "sys",
+    "name": "系统管理",
+    "resourcesType": 1,
+    "sortId": 10000,
+    "authorize": true,
+    "menu": true,
+    "sysModule": true,
+    "identification": "",
+    "permissionUrl": "",
+    "url": "",
+    "icon": "md-settings",
+    "summary": "",
+    "children": [
+      {
+        "id": "sys_configure",
+        "name": "系统配置",
+        "resourcesType": 1,
+        "sortId": 1000,
+        "authorize": true,
+        "menu": true,
+        "sysModule": true,
+        "identification": "",
+        "permissionUrl": "",
+        "url": "",
+        "icon": "ios-construct",
+        "summary": "",
+        "children": [
+          {
+            "id": "sys_configure_app",
+            "name": "应用配置",
+            "resourcesType": 1,
+            "sortId": 100,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "app_onfigre",
+            "permissionUrl": "",
+            "url": "",
+            "icon": "ios-appstore",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "save",
+                "friendlyName": "保存",
+                "sortId": 1,
+                "permissionUrl": "/sys/info/save\n/sys/info/upload/file",
+                "summary": ""
+              }
+            ]
+          },
+          {
+            "id": "sys_configure_help_center",
+            "name": "帮助手册",
+            "resourcesType": 1,
+            "sortId": 200,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "help_center",
+            "permissionUrl": "/sys/help/document/query/children",
+            "url": "",
+            "icon": "md-help",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "generateHtml",
+                "friendlyName": "生成Html",
+                "sortId": 1,
+                "permissionUrl": "/sys/help/document/generate/html",
+                "summary": ""
+              },
+              {
+                "name": "add",
+                "friendlyName": "添加",
+                "sortId": 50,
+                "permissionUrl": "/sys/help/document/add/directory\n/sys/help/document/add/file",
+                "summary": "添加数据权限"
+              },
+              {
+                "name": "update",
+                "friendlyName": "修改",
+                "sortId": 51,
+                "permissionUrl": "/sys/help/document/update/directory\n/sys/help/document/update/file\n/sys/help/document/update/status",
+                "summary": "修改数据权限"
+              },
+              {
+                "name": "delete",
+                "friendlyName": "删除",
+                "sortId": 52,
+                "permissionUrl": "/sys/help/document/delete",
+                "summary": "删除数据权限"
+              },
+              {
+                "name": "query",
+                "friendlyName": "查询",
+                "sortId": 100,
+                "permissionUrl": "/sys/help/document/query/single\n/sys/help/document/query/children",
+                "summary": "数据查询权限"
+              }
+            ]
+          }
+        ],
+        "permissions": [
+        ]
+      },
+      {
+        "id": "sys_dictionary",
+        "name": "基础数据",
+        "resourcesType": 1,
+        "sortId": 1100,
+        "authorize": true,
+        "menu": true,
+        "sysModule": true,
+        "identification": "",
+        "permissionUrl": "",
+        "url": "",
+        "icon": "md-list-box",
+        "summary": "",
+        "children": [
+          {
+            "id": "sys_dictionary_common",
+            "name": "公共字典",
+            "resourcesType": 1,
+            "sortId": 100,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "commonDic",
+            "permissionUrl": "/common/dictionary/query/page",
+            "url": "",
+            "icon": "ios-map-outline",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "add",
+                "friendlyName": "添加",
+                "sortId": 50,
+                "permissionUrl": "/common/dictionary/add\n/common/dictionary/upload/file",
+                "summary": "添加数据权限"
+              },
+              {
+                "name": "update",
+                "friendlyName": "修改",
+                "sortId": 51,
+                "permissionUrl": "/common/dictionary/update\n/common/dictionary/update/status\n/common/dictionary/upload/file",
+                "summary": "更新数据权限"
+              },
+              {
+                "name": "delete",
+                "friendlyName": "删除",
+                "sortId": 52,
+                "permissionUrl": "/common/dictionary/delete",
+                "summary": "删除数据权限"
+              },
+              {
+                "name": "query",
+                "friendlyName": "查询",
+                "sortId": 100,
+                "permissionUrl": "/common/dictionary/query/list\n/common/dictionary/query/page\n/common/dictionary/query/single",
+                "summary": "数据查询权限"
+              },
+              {
+                "name": "export",
+                "friendlyName": "导出",
+                "sortId": 101,
+                "permissionUrl": "/common/dictionary/download/excel/body\n/common/dictionary/download/excel/Info",
+                "summary": "将数据导出权限"
+              }
+            ]
+          },
+          {
+            "id": "sys_dictionary_region",
+            "name": "行政区管理",
+            "resourcesType": 1,
+            "sortId": 200,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "areaInfoManager",
+            "permissionUrl": "/common/region/query/page",
+            "url": "",
+            "icon": "ios-filing-outline",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "add",
+                "friendlyName": "添加",
+                "sortId": 50,
+                "permissionUrl": "/common/region/add\n/common/region/download/import/template/body\n/common/region/download/import/template/Info\n/common/region/upload/import/excel",
+                "summary": "添加数据权限"
+              },
+              {
+                "name": "update",
+                "friendlyName": "修改",
+                "sortId": 51,
+                "permissionUrl": "/common/region/update\n/common/region/update/status\n/common/region/download/import/template/Info\n/common/region/download/import/template/body",
+                "summary": "更新数据权限"
+              },
+              {
+                "name": "delete",
+                "friendlyName": "删除",
+                "sortId": 52,
+                "permissionUrl": "/common/region/delete",
+                "summary": "删除数据权限"
+              },
+              {
+                "name": "query",
+                "friendlyName": "查询",
+                "sortId": 100,
+                "permissionUrl": "/common/region/query/single\n/common/region/query/page",
+                "summary": "数据查询权限"
+              },
+              {
+                "name": "export",
+                "friendlyName": "导出",
+                "sortId": 101,
+                "permissionUrl": "/common/region/download/excel/body\n/common/region/download/excel/Info",
+                "summary": "将数据导出权限"
+              }
+            ]
+          }
+        ],
+        "permissions": [
+        ]
+      },
+      {
+        "id": "sys_agreement",
+        "name": "协议管理",
+        "resourcesType": 1,
+        "sortId": 1200,
+        "authorize": true,
+        "menu": true,
+        "sysModule": true,
+        "identification": "",
+        "permissionUrl": "",
+        "url": "",
+        "icon": "ios-infinite",
+        "summary": "",
+        "children": [
+          {
+            "id": "sys_agreement_user",
+            "name": "用户协议",
+            "resourcesType": 1,
+            "sortId": 100,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "business_agreement",
+            "permissionUrl": "/sys/agreement/query/page",
+            "url": "",
+            "icon": "ios-people-outline",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "add",
+                "friendlyName": "添加",
+                "sortId": 50,
+                "permissionUrl": "/sys/agreement/add",
+                "summary": "添加数据权限"
+              },
+              {
+                "name": "update",
+                "friendlyName": "修改",
+                "sortId": 51,
+                "permissionUrl": "/sys/agreement/update\n/sys/agreement/update/status",
+                "summary": "更新数据权限"
+              },
+              {
+                "name": "delete",
+                "friendlyName": "删除",
+                "sortId": 52,
+                "permissionUrl": "/sys/agreement/delete",
+                "summary": "删除数据权限"
+              },
+              {
+                "name": "query",
+                "friendlyName": "查询",
+                "sortId": 100,
+                "permissionUrl": "/sys/agreement/query/page\n/sys/agreement/query/single",
+                "summary": "数据查询权限"
+              },
+              {
+                "name": "export",
+                "friendlyName": "导出",
+                "sortId": 101,
+                "permissionUrl": "/sys/agreement/download/excel/body\n/sys/agreement/download/excel/Info",
+                "summary": "将数据导出权限"
+              }
+            ]
+          }
+        ],
+        "permissions": [
+        ]
+      }
+    ],
+    "permissions": [
+    ]
+  }
+]

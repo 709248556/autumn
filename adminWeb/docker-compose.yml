@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  stone-material-admin-web:
+#    build: .
+    image: 127.0.0.1:5000/autumn-admin-web
+    ports:
+      - '3012:80'
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    restart: always
+    container_name: autumn-admin-web

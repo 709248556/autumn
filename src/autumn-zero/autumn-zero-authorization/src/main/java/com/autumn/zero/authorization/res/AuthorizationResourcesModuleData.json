@@ -1,0 +1,364 @@
+[
+  {
+    "id": "sys",
+    "name": "系统管理",
+    "resourcesType": 1,
+    "sortId": 10000,
+    "authorize": true,
+    "menu": true,
+    "sysModule": true,
+    "identification": "",
+    "permissionUrl": "",
+    "url": "",
+    "icon": "md-settings",
+    "summary": "",
+    "children": [
+      {
+        "id": "sys_permission",
+        "name": "权限管理",
+        "resourcesType": 1,
+        "sortId": 5000,
+        "authorize": true,
+        "menu": true,
+        "sysModule": true,
+        "identification": "",
+        "permissionUrl": "",
+        "url": "",
+        "icon": "ios-build",
+        "summary": "",
+        "children": [
+          {
+            "id": "sys_permission_role",
+            "name": "角色管理",
+            "resourcesType": 1,
+            "sortId": 100,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "roles",
+            "permissionUrl": "/sys/role/query/list\n/sys/role/query/page\n/sys/user/query/list\n/sys/user/query/page",
+            "url": "",
+            "icon": "ios-people",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "authorize",
+                "friendlyName": "授权",
+                "sortId": 1,
+                "permissionUrl": "/sys/role/authorize\n/sys/role/authorize/all\n/sys/role/query/authorize\n/sys/role/query/authorize/tree",
+                "summary": ""
+              },
+              {
+                "name": "add",
+                "friendlyName": "添加",
+                "sortId": 50,
+                "permissionUrl": "/sys/role/add",
+                "summary": "添加数据权限"
+              },
+              {
+                "name": "update",
+                "friendlyName": "修改",
+                "sortId": 51,
+                "permissionUrl": "/sys/role/update",
+                "summary": "修改数据权限"
+              },
+              {
+                "name": "delete",
+                "friendlyName": "删除",
+                "sortId": 52,
+                "permissionUrl": "/sys/role/delete",
+                "summary": "删除数据权限"
+              },
+              {
+                "name": "query",
+                "friendlyName": "查询",
+                "sortId": 100,
+                "permissionUrl": "/sys/role/query/list\n/sys/role/query/page\n/sys/role/query/single\n/sys/user/query/list\n/sys/user/query/page\n/sys/user/query/single\n/sys/role/query/authorize\n/sys/role/query/authorize/tree",
+                "summary": "数据查询权限"
+              },
+              {
+                "name": "export",
+                "friendlyName": "导出",
+                "sortId": 101,
+                "permissionUrl": "/sys/role/download/excel/body\n/sys/role/download/excel/Info",
+                "summary": "将数据导出权限"
+              }
+            ]
+          },
+          {
+            "id": "sys_permission_user",
+            "name": "用户管理",
+            "resourcesType": 1,
+            "sortId": 200,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "users",
+            "permissionUrl": "/sys/role/query/list\n/sys/role/query/page\n/sys/user/query/list\n/sys/user/query/page",
+            "url": "",
+            "icon": "md-people",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "authorize",
+                "friendlyName": "授权",
+                "sortId": 1,
+                "permissionUrl": "/sys/user/authorize",
+                "summary": ""
+              },
+              {
+                "name": "resetPassword",
+                "friendlyName": "重置密码",
+                "sortId": 2,
+                "permissionUrl": "/sys/user/reset/password",
+                "summary": ""
+              },
+              {
+                "name": "add",
+                "friendlyName": "添加",
+                "sortId": 50,
+                "permissionUrl": "/sys/user/add",
+                "summary": "添加数据权限"
+              },
+              {
+                "name": "update",
+                "friendlyName": "修改",
+                "sortId": 51,
+                "permissionUrl": "/sys/user/update",
+                "summary": "修改数据权限"
+              },
+              {
+                "name": "delete",
+                "friendlyName": "删除",
+                "sortId": 52,
+                "permissionUrl": "/sys/user/delete",
+                "summary": "删除数据权限"
+              },
+              {
+                "name": "query",
+                "friendlyName": "查询",
+                "sortId": 100,
+                "permissionUrl": "/sys/role/query/list\n/sys/role/query/page\n/sys/role/query/single\n/sys/user/query/list\n/sys/user/query/page\n/sys/user/query/single\n/sys/user/query/authorize\n/sys/user/query/authorize/tree",
+                "summary": "数据查询权限"
+              },
+              {
+                "name": "export",
+                "friendlyName": "导出",
+                "sortId": 101,
+                "permissionUrl": "/sys/user/download/excel/body\n/sys/user/download/excel/Info",
+                "summary": "将数据导出权限"
+              }
+            ]
+          }
+        ],
+        "permissions": [
+        ]
+      },
+      {
+        "id": "sys_log",
+        "name": "日志管理",
+        "resourcesType": 1,
+        "sortId": 5100,
+        "authorize": true,
+        "menu": true,
+        "sysModule": true,
+        "identification": "",
+        "permissionUrl": "",
+        "url": "",
+        "icon": "ios-contact",
+        "summary": "",
+        "children": [
+          {
+            "id": "sys_log_login",
+            "name": "登录日志",
+            "resourcesType": 1,
+            "sortId": 100,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "sys_log_login",
+            "permissionUrl": "/sys/log/login/query/page\n/sys/log/login/query/single",
+            "url": "",
+            "icon": "logo-twitch",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "deleteAll",
+                "friendlyName": "清除日志",
+                "sortId": 1,
+                "permissionUrl": "/sys/log/login/delete/all",
+                "summary": ""
+              },
+              {
+                "name": "query",
+                "friendlyName": "查询",
+                "sortId": 100,
+                "permissionUrl": "/sys/log/login/query/page\n/sys/log/login/query/single",
+                "summary": "数据查询权限"
+              },
+              {
+                "name": "export",
+                "friendlyName": "导出",
+                "sortId": 101,
+                "permissionUrl": "/sys/log/login/download/excel/body\n/sys/log/login/download/excel/Info",
+                "summary": "将数据导出权限"
+              }
+            ]
+          },
+          {
+            "id": "sys_log_operation",
+            "name": "操作日志",
+            "resourcesType": 1,
+            "sortId": 200,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "sys_log_operation",
+            "permissionUrl": "/sys/log/operation/query/page\n/sys/log/operation/query/single",
+            "url": "",
+            "icon": "logo-twitch",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "deleteAll",
+                "friendlyName": "清除日志",
+                "sortId": 1,
+                "permissionUrl": "/sys/log/operation/delete/all",
+                "summary": ""
+              },
+              {
+                "name": "query",
+                "friendlyName": "查询",
+                "sortId": 100,
+                "permissionUrl": "/sys/log/operation/query/page\n/sys/log/operation/query/single",
+                "summary": "数据查询权限"
+              },
+              {
+                "name": "export",
+                "friendlyName": "导出",
+                "sortId": 101,
+                "permissionUrl": "/sys/log/operation/download/excel/body\n/sys/log/operation/download/excel/Info",
+                "summary": "将数据导出权限"
+              }
+            ]
+          }
+        ],
+        "permissions": [
+        ]
+      },
+      {
+        "id": "sys_module",
+        "name": "资源管理",
+        "resourcesType": 1,
+        "sortId": 10000,
+        "authorize": true,
+        "menu": true,
+        "sysModule": true,
+        "identification": "",
+        "permissionUrl": "",
+        "url": "",
+        "icon": "ios-list-box",
+        "summary": "",
+        "children": [
+          {
+            "id": "sys_module_resources",
+            "name": "模块资源",
+            "resourcesType": 1,
+            "sortId": 100,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "resources_modules",
+            "permissionUrl": "/sys/res/module/query/children\n/sys/res/module/query/page\n/sys/res/module/query/list/type",
+            "url": "",
+            "icon": "md-list",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "permissionConfig",
+                "friendlyName": "权限配置",
+                "sortId": 1,
+                "permissionUrl": "/sys/res/permission/add\n/sys/res/permission/add/default/edit\n/sys/res/permission/add/default/query\n/sys/res/permission/delete\n/sys/res/permission/download/excel/body\n/sys/res/permission/download/excel/Info\n/sys/res/permission/query/list\n/sys/res/permission/query/page\n/sys/res/permission/query/single\n/sys/res/permission/update",
+                "summary": ""
+              },
+              {
+                "name": "add",
+                "friendlyName": "添加",
+                "sortId": 50,
+                "permissionUrl": "/sys/res/module/add\n/sys/res/module/add/default",
+                "summary": "添加数据权限"
+              },
+              {
+                "name": "update",
+                "friendlyName": "修改",
+                "sortId": 51,
+                "permissionUrl": "/sys/res/module/update",
+                "summary": "修改数据权限"
+              },
+              {
+                "name": "delete",
+                "friendlyName": "删除",
+                "sortId": 52,
+                "permissionUrl": "/sys/res/module/delete",
+                "summary": "删除数据权限"
+              },
+              {
+                "name": "query",
+                "friendlyName": "查询",
+                "sortId": 100,
+                "permissionUrl": "/sys/res/module/query/children\n/sys/res/module/query/list\n/sys/res/module/query/list/type\n/sys/res/module/query/page\n/sys/res/module/query/single\n/sys/res/module/query/tree\n/sys/res/module/query/tree/all\n/sys/res/module/query/tree/menu\n/sys/res/module/query/tree/permission\n/sys/res/module/query/tree/permission/all",
+                "summary": "数据查询权限"
+              },
+              {
+                "name": "export",
+                "friendlyName": "导出",
+                "sortId": 101,
+                "permissionUrl": "/sys/res/module/download/excel/body\n/sys/res/module/download/excel/Info",
+                "summary": "将数据导出权限"
+              }
+            ]
+          },
+          {
+            "id": "sys_module_url_request_permission_mapping",
+            "name": "地址请求权限",
+            "resourcesType": 1,
+            "sortId": 10000,
+            "authorize": true,
+            "menu": true,
+            "sysModule": true,
+            "identification": "url-request-permission-mapping",
+            "permissionUrl": "/sys/res/url/query/mapping/groups\n/sys/res/url/query/mapping/infos",
+            "url": "",
+            "icon": "ios-key-outline",
+            "summary": "",
+            "children": [
+            ],
+            "permissions": [
+              {
+                "name": "resetInterceptorPermission",
+                "friendlyName": "重置权限缓存",
+                "sortId": 1,
+                "permissionUrl": "/sys/res/url/reset/interceptor/permission",
+                "summary": ""
+              }
+            ]
+          }
+        ],
+        "permissions": [
+        ]
+      }
+    ],
+    "permissions": [
+    ]
+  }
+]

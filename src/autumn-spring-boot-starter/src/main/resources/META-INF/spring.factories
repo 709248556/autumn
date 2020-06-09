@@ -1,0 +1,6 @@
+# Bootstrap components
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+com.autumn.spring.boot.AutumnSrpingBootstrapConfiguration
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.autumn.spring.boot.AutumnAutoConfiguration
