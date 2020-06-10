@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.autumn</groupId>
+        <artifactId>autumn</artifactId>
+        <version>3.1.10</version>
+    </parent>
+    <packaging>pom</packaging>
+    <artifactId>autumn-zero</artifactId>
+    <name>autumn-zero</name>
+    <modules>
+        <module>autumn-zero-file-storage</module>
+        <module>autumn-zero-authorization</module>
+        <module>autumn-zero-common-library</module>
+        <module>autumn-zero-ueditor-web</module>
+        <module>autumn-zero-common-library-web</module>
+        <module>autumn-zero-authorization-web</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+
+    </dependencies>
+</project>

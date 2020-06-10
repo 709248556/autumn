@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.autumn</groupId>
+		<artifactId>autumn</artifactId>
+		<version>3.1.10</version>
+	</parent>
+	<artifactId>autumn-util-all</artifactId>
+	<name>autumn-util-all</name>
+	<packaging>pom</packaging>
+	<modules>
+		<module>autumn-util</module>
+		<module>autumn-util-web</module>
+		<module>autumn-util-excel</module>
+		<module>autumn-util-word</module>
+	</modules>
+	<properties>
+
+	</properties>
+	<dependencies>
+
+	</dependencies>
+</project>
