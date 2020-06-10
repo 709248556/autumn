@@ -386,6 +386,9 @@ public interface EntityMapper<TEntity> extends Mapper {
      * @param wrapper 包装器
      * @return
      */
+    //@Author: yan
+    //type 指明了EntityMapperProvider类
+    //method 指明了调用EntityMapperProvider类中的selectForList方法
     @SelectProvider(type = EntityMapperProvider.class, method = SELECT_FOR_LIST)
     List<TEntity> selectForList(@Param(ARG_NAME_WRAPPER) QueryWrapper wrapper);
 

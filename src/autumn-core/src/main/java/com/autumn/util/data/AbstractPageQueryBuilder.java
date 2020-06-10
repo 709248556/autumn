@@ -128,12 +128,12 @@ public abstract class AbstractPageQueryBuilder<TQueryBuilder extends AbstractPag
      */
     protected <TResult> PageResult<TResult> toPageResult(FunctionOneResult<QueryWrapper, Integer> countDelegate,
                                                          FunctionOneResult<QueryWrapper, List<TResult>> queryDelegate) {
-        int count = toCount(countDelegate);
+        int count = toCount(countDelegate);//执行了查询动作
         DefaultPageResult<TResult> page = new DefaultPageResult<>(this.input.getCurrentPage(),
                 this.input.getPageSize(), count);
         this.getQuery().page(page.getCurrentPage(), page.getPageSize());
         if (count > 0) {
-            List<TResult> entitys = queryDelegate.apply(this.getQuery());
+            List<TResult> entitys = queryDelegate.apply(this.getQuery());//执行了查询动作
             page.setItems(entitys);
         } else {
             page.setItems(new ArrayList<>());

@@ -9,7 +9,7 @@ import java.io.Serializable;
  *
  *         2017-12-05 16:30:25
  */
-@FunctionalInterface
+//@Author: yan{FunctionOneResult是函数式注解}
 public interface FunctionOneResult<T, TResult> extends Serializable {
 
 	/**
