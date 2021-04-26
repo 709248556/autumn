@@ -38,7 +38,7 @@
         <javax.mail.version>1.6.2</javax.mail.version>
         <fastjson.version>1.2.60</fastjson.version>
         <commons.lang.version>2.6</commons.lang.version>
-        <commons.io.version>2.5</commons.io.version>
+        <commons.io.version>2.7</commons.io.version>
         <commons.logging.version>1.2</commons.logging.version>
         <commons.collections.version>3.2.2</commons.collections.version>
         <org.modelmapper.version>2.3.4</org.modelmapper.version>
