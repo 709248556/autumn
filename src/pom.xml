@@ -44,7 +44,7 @@
         <org.modelmapper.version>2.3.4</org.modelmapper.version>
         <org.apache.poi.version>4.1.0</org.apache.poi.version>
         <reflectasm.version>1.09</reflectasm.version>
-        <org.bouncycastle.bcprov.version>1.56</org.bouncycastle.bcprov.version>
+        <org.bouncycastle.bcprov.version>1.67</org.bouncycastle.bcprov.version>
         <org.docx4j.version>6.1.0</org.docx4j.version>
         <org.docx4j.export.fo.version>6.1.0</org.docx4j.export.fo.version>
         <org.jodconverter.version>4.1.0</org.jodconverter.version>
