@@ -62,7 +62,7 @@
         <aliyun.sdk.core.version>4.3.1</aliyun.sdk.core.version>
         <qcloudsms.version>1.0.6</qcloudsms.version>
         <httpclient.version>4.5.6</httpclient.version>
-        <org.apache.shiro.version>1.4.1</org.apache.shiro.version>
+        <org.apache.shiro.version>1.7.1</org.apache.shiro.version>
         <shiro.redis.version>3.2.3</shiro.redis.version>
         <io.jsonwebtoken.version>0.9.1</io.jsonwebtoken.version>
         <io.springfox.version>2.7.0</io.springfox.version>
