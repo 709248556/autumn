@@ -36,7 +36,7 @@
     <properties>
         <javax.persistence.version>1.0.2</javax.persistence.version>
         <javax.mail.version>1.6.2</javax.mail.version>
-        <fastjson.version>1.2.60</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <commons.lang.version>2.6</commons.lang.version>
         <commons.io.version>2.5</commons.io.version>
         <commons.logging.version>1.2</commons.logging.version>
