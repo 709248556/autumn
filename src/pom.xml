@@ -73,7 +73,7 @@
         <pinyin4j.version>2.5.1</pinyin4j.version>
         <google.zxing.version>3.4.0</google.zxing.version>
         <slf4j-api.version>1.7.25</slf4j-api.version>
-        <mysql.connector.java.version>8.0.17</mysql.connector.java.version>
+        <mysql.connector.java.version>8.0.28</mysql.connector.java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencyManagement>
